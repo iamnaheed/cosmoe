@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="/static/JS/jquery.js"></script>
+    <link rel="stylesheet" href="/static/css/static.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>FormalSearch</title>
+</head>
+
+<body>
+    <div class="mainhead">
+        <div class="first-row">
+            <a href="/">
+            <img src="/static/images/logo.png" alt="Centered Image">
+        </a>
+        </div>
+        <div class="second-row">
+
+            <div class="search-icon">
+                <img src="/static/images/web.png">
+                <form action="{% url 'formalsearch' %}" method="GET">
+                    <input type="text" class="main-search" name="query" placeholder="What are you looking for?">
+                    {% comment %} <button type="submit">Search</button> {% endcomment %}
+                </form>
+            </div>
+            <div class="hot-icons right">
+                <img src="/static/images/heart.png">
+            </div>
+        </div>
+        <hr>
+        <div class="third-row">
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#">BEST SELLER</a></li>
+                    <li><a href="#">CATEGORY</a></li>
+                    <li><a href="#">CONTACT US</a></li>
+                    <li><a href="#">ABOUT US</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="searchproduct searchformalproduct">
+        <div class="seracharea">
+            <div class="searchfilter">
+                <p class="fs_12">Home/Earring</p>
+                <h2>Refine By</h2>
+                <ul>
+                    <h3>Category</h3>
+                    <li><input type="checkbox">
+                        <p>TABLE DECOR</p>
+                    </li>
+                    <li><input type="checkbox">
+                        <p>HOME DECOR</p>
+                    </li>
+                    <li><input type="checkbox">
+                        <p>WALL DECOR</p>
+                    </li>
+                    <li><input type="checkbox">
+                        <p>CLOCK DECOR</p>
+                    </li>
+                    <li><input type="checkbox">
+                        <p>KITCHEN DECOR</p>
+                    </li>
+                </ul>
+                <div class="filterbar"></div>
+                <ul>
+                    <h3>Price-Range</h3>
+                    <li><input type="checkbox">
+                        <p>BELOW RS.500</p>
+                    </li>
+                    <li><input type="checkbox">
+                        <p>RS.500-RS.1000</p>
+                    </li>
+                    <li><input type="checkbox">
+                        <p>RS.1001-RS.1500</p>
+                    </li>
+                    <li><input type="checkbox">
+                        <p>RS.1501-RS.2000</p>
+                    </li>
+                    <li><input type="checkbox">
+                        <p>RS.2001-RS.2500</p>
+                    </li>
+                    <p>Enter Price Range</p>
+                    <li>
+                        <input type="text" name="" id="" placeholder="Min" class="range"> &nbsp;&nbsp;-
+                        &nbsp;&nbsp;<input type="text" name="" id="" placeholder="MAX" class="range"><span>></span>
+                    </li>
+                </ul>
+                <div class="filterbar"></div>
+                <ul>
+                    <h3>Brand</h3>
+                    <li><input type="checkbox">
+                        <p>STATE</p>
+                    </li>
+                    <li><input type="checkbox">
+                        <p>COOPER</p>
+                    </li>
+                    <li><input type="checkbox">
+                        <p>BARDOT</p>
+                    </li>
+                    <li><input type="checkbox">
+                        <p>CECE</p>
+                    </li>
+                    <li><input type="checkbox">
+                        <p>DONNA RICCO</p>
+                    </li>
+                </ul>
+                <div class="filterbar"></div>
+                <ul>
+                    <h3>Color</h3>
+                    <div>
+                        <input type="radio" class="col_1" checked="checked">
+                        <input type="radio" class="col_2" checked="checked">
+                        <input type="radio" class="col_3" checked="checked">
+                        <input type="radio" class="col_4" checked="checked">
+                        <input type="radio" class="col_5" checked="checked">
+                        <input type="radio" class="col_6" checked="checked"><br><br>
+                        <input type="radio" class="col_7" checked="checked">
+                        <input type="radio" class="col_8" checked="checked">
+                        <input type="radio" class="col_9" checked="checked">
+                        <input type="radio" class="col_10" checked="checked">
+                        <input type="radio" class="col_11" checked="checked">
+                    </div>
+                </ul>
+            </div>
+            <div class="search_gallery">
+                {% if search_results %}
+                    {% for result in search_results %}
+                        <div class="card cards">
+                            <div class="cardimg">
+                                <img src="{{ result.img_src }}" alt="">
+                            </div>
+                            <div class="p_20">
+                                <div class="bar pt_10"></div>
+                                <h4 class="pt_10" style="color: rgb(181, 180, 180); font-size: 20px;" data-full-title="{{ result.title }}">
+                                    {% if result.title|length > 20 %}
+                                        {{ result.title|slice:":20" }}... <a href="#" class="read-more">Read More</a>
+                                    {% else %}
+                                        {{ result.title }}
+                                    {% endif %}
+                                </h4>
+                                <p class="pt_10">Rating: {{ result.rating }}</p>
+                                <p class="pt_10">Price: {{ result.price }}</p>
+                                <div class="buyer pt_10">
+                                    <p>Rs. 870</p>
+                                    <a href="{{ result.addtocart_href }}">Buy Now
+                                        &nbsp; <i style="font-size:20px ; color:white; ">&#x2192;</i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <p>No products found.</p>
+                {% endif %}
+            </div>
+            
+            
+            
+            
+    </div>
+
+
+    <footer>
+        <div class="mainfooter">
+            <div class="soiclamedia">
+                <img src="/static/" alt="Centered Image">
+                <p class="py_20 col_gray">We will help to find <br> your dream Product</p>
+                <div>
+                    <a href="#" class="fa fsa fa-facebook"></a>
+                    <a href="#" class="fa fsa fa-instagram"></a>
+                    <a href="#" class="fa fsa fa-twitter"></a>
+                </div>
+            </div>
+            <div class="newsletter">
+                <h3>Join Us</h3>
+                <p class="pt_20 col_dgray pb_10">SUBSCRIBE TO OUR NEWSLETTER</p>
+                <div class="newsbox">
+                    <input type="email" placeholder="Email Address">
+                    <input type="submit" class="sub_btn" value="SUBSCRIBE!" name="" id="">
+                </div>
+            </div>
+            <div class="sitedetails">
+                <div class="sitelink">
+                    <h3>Information</h3>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Product</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="sitelink">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Career</a></li>
+                        <li><a href="#">Our Story</a></li>
+                    </ul>
+                </div>
+                <div class="sitelink">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><a href="#">Geeting Started</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Resources</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="copyright col_gray">2024 All Right Received term of use COSMOe</div>
+    </footer>
+
+
+    <script>
+        // JavaScript to handle "Read More" functionality
+        document.addEventListener("DOMContentLoaded", function() {
+            var readMoreLinks = document.querySelectorAll('.read-more');
+            readMoreLinks.forEach(function(link) {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    var card = event.target.closest('.card');
+                    var title = card.querySelector('h4');
+                    var fullTitle = title.getAttribute('data-full-title');
+                    if (fullTitle) {
+                        title.textContent = fullTitle;
+                        // Change "Read More" link text to "Read Less"
+                        link.textContent = 'Read Less';
+                        // Add event listener to "Read Less" link to revert back to truncated title
+                        link.addEventListener('click', function(event) {
+                            event.preventDefault();
+                            title.textContent = fullTitle.slice(0, 20) + '...';
+                            link.textContent = 'Read More';
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+    
+    
+    
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+        integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html> 
+
+
+
+
+
+
+

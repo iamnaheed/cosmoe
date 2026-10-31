@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <title>CosmoE</title>
+    <script src="static/JS/jquery.js"></script>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/static.css">
+</head>
+
+<body>
+    <div class="mainhead">
+        <div class="first-row">
+            <a href="/">
+            <img src="static/images/logo.png" alt="Centered Image">
+        </a>
+        </div>
+        <div class="second-row">
+
+            <div class="search-icon">
+                <img src="static/images/web.png">
+                <form action="{% url 'formalsearch' %}" method="GET">
+                    <input type="text" class="main-search" name="query" placeholder="What are you looking for?">
+                    {% comment %} <button type="submit">Search</button> {% endcomment %}
+                </form>
+            </div>
+            <div class="hot-icons right">
+                <img src="static/images/heart.png">
+            </div>
+        </div>
+        <hr>
+        <div class="third-row">
+            <nav class="navbar">
+                <ul>
+                    <li><a href="/">HOME</a></li>
+                    <li class="dropdown-li">
+                        <a href="#">CATEGORIES</a>
+                        <ul class="dropdown">
+                            <li><a href="{% url 'category' 'Kitchen' %}"><img src="/static/images/kitchen.png" alt="Kitchen Ware">Kitchen ware</a></li>
+                            <li><a href="{% url 'category' 'Home decor' %}"><img src="/static/images/shelf.png" alt="Home Decor">Home decor</a></li>
+                            <li><a href="{% url 'category' 'Wooden' %}"><img src="/static/images/furniture.png" alt="Wooden">Wooden</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">BEST SELLER</a></li>
+                    <li><a href="#">RELATED SEARCH</a></li>
+                    <li><a href="about-us/">ABOUT US</a></li>
+                    <li><a href="contact-us/">CONTACT US</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+              
+    </div>
+    <header>
+        <div class="main-header">
+            <div class="header-content">
+                <h1 style="padding: 10px 0px; font-size: 50px;">
+                    Shop smarter , Search easir
+                </h1>
+                <p style="padding-bottom:30px;padding-top: 30px; font-size: 20px; font-weight: bold;">Introducing our
+                    AI-Powered search for your casual queries </p>
+                <div style="display: flex; width: 40%; justify-content: space-between; padding: 15px 0px;">
+                    <div style="text-align: center; font-size: 20px;">
+                        <h2>1000+</h2>
+                        <p style="padding-top: 12px;">product</p>
+                    </div>
+                    <div style="border-left:2px solid black; padding-left: 70px; text-align: center; font-size: 20px;">
+                        <h2>500+</h2>
+                        <p style="padding-top: 12px;">vistors</p>
+                    </div>
+                </div>
+                <div class="header-search">
+                    <form action="{% url 'search_results' %}" method="post">
+                        {% csrf_token %}
+                        <input type="text" class="informal" name="queryInput" placeholder="Write your informal query here...">
+                        <button type="submit" style="font-size: 20px;"><img src="static/images/send-message.png"></button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="header-img">
+                <img class="vactor12 " src="static/images/vector12.png" alt="">
+                <img class="vactor13 " src="static/images/vector13.png" alt="">
+                <img src="static/images/header.jpg" alt="">
+            </div>
+        </div>
+        <div class="datascrap">
+            <p>Data Scraped From</p>
+            <div class="scrapweb">
+                <img src="static/images/daraz.png" alt="">
+                <img class="pt_20" src="static/images/amazon.png" alt="">
+            </div>
+        </div>
+    </header>
+
+    <div class="bestseller">
+        <div class="sellertxt">
+            <h2>Best selling <br> products</h2>
+            <p clss="py_20 col_gray">Easiest way to healthy <br> life by buying your <br> favorite product.</p>
+            <button>see more</button>
+        </div>
+        <div class="bestsellingcard">
+            <div class="card">
+                <div class="img_frame">
+                    <i class="fa fa-heart-o"></i>
+                    <img src="static/images/images (2).jpeg" alt="">
+                </div>
+                <div class="pt_20 mt_30 card_content">
+                    <div class="bar"></div>
+                    <h3 class="pt_20" style="color: rgb(181, 180, 180); font-size: 18px;">Lorem ipsum</h3>
+                    <p class="pt_10 fs_12">Lorem ipsum, dolor sit amet consectetu dolor sit amet consectetur r
+                        adipisicing elit.
+                        At, aliquid?</p>
+                    <p class="pt_10 pb_10">Rs. 870</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img_frame">
+                    <i class="fa fa-heart-o"></i>
+                    <img src="static/images/download.jpeg" alt="">
+                </div>
+                <div class="pt_20 mt_30 card_content">
+                    <div class="bar pt_10"></div>
+                    <h3 class="pt_20" style="color: rgb(181, 180, 180); font-size: 18px;">Lorem ipsum</h3>
+                    <p class="pt_10 fs_12">Lorem ipsum, dolor sit amet consectetu dolor sit amet consectetur r
+                        adipisicing elit.
+                        At, aliquid?</p>
+                    <p class="pt_10 pb_10">Rs. 870</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="img_frame">
+                    <i class="fa fa-heart-o"></i>
+                    <img src="static/images/download (1).jpeg" alt="">
+                </div>
+                <div class="pt_20 mt_30 card_content">
+                    <div class="bar pt_10"></div>
+                    <h3 class="pt_20" style="color: rgb(181, 180, 180); font-size: 18px;">Lorem ipsum</h3>
+                    <p class="pt_10 fs_12">Lorem ipsum, dolor sit amet consectetu dolor sit amet consectetur r
+                        adipisicing elit.
+                        At, aliquid?</p>
+                    <p class="pt_10 pb_10">Rs. 870</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="categories" id="bestsellerproduct">
+        <h2>Categories</h2>
+        <p class="col_dgray pt_10">Find what are you loocking for</p>
+    </div>
+    <div class="categorycards">
+        <div class="category_slider">
+            <div class="cards precard animate__animated animate__fadeInLeft">
+                <img src="static/images/Woodcraft.JPEG" alt="">
+                <h3 class="animate__animated animate__fadeInLeft">Woodcraft</h3>
+                <p class="deactve">Lorem ipsum dolor sit amet.</p>
+                <button class="deactve">Explore</button>
+            </div>
+            <div class="cards centercard animate__animated animate__fadeInUpBig ">
+                <img src="static/images/ktchen.jpeg" alt="">
+                <h3 class="pt_10">Kitchen Ware</h3>
+                <p class="active col_dgray pt_10">Lorem ipsum dolor sit amet.</p>
+                <button>Explore</button>
+            </div>
+            <div class="cards nextcard animate__animated animate__fadeInRight">
+                <img src="static/images/home decor.jpeg" alt="">
+                <h3 class="animate__animated animate__fadeInRight">Home Decor</h3>
+                <p class="deactve">Lorem ipsum dolor sit amet.</p>
+                <button class="deactve">Explore</button>
+            </div>
+        </div>
+    </div>
+    <div class="filter">
+        <div style="width: 40%;">
+            <p>Best Seller</p>
+            <div style="display: flex; width: 100%; align-items: baseline;">
+                <h2 class="pt_10">Best Selling Products</h2>
+                <div class="bar"></div>
+            </div>
+        </div>
+        <button class="btn">SEE ALL</button>
+    </div>
+    <div class="catagery_gallery">
+        {% for product in page_obj %}
+        <div class="card">
+            <div class="cardimg">
+                <img src="{{product.image_src}}" alt="{{product.title}}">
+            </div>
+            <div class="p_20">
+                <div class="bar pt_10"></div>
+                <p class="pt_10">{{ product.title }}</p>
+                <p>Rating: {{ product.rating }}</p>
+                <p>Review Count: {{ product.review_count }}</p>
+                <p>Sold Count: {{ product.sold_count }}</p>
+                <div class="buyer pt_10">
+                    <p>Rs.{{ product.price }}</p>
+                    <a href="#">Buy Now
+                        &nbsp; <i style="font-size:20px ; color:white; ">&#x2192;</i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    
+    <div class="pagination_link">
+        {% if page_obj.has_previous %}
+            <a href="?page=1">First</a>
+            <a href="?page={{ page_obj.previous_page_number }}">Previous</a>
+        {% endif %}
+        {% for num in page_obj.paginator.page_range %}
+            {% if num >= page_obj.number|add:"-1" and num <= page_obj.number|add:"1" %}
+                <a href="?page={{ num }}">{{ num }}</a>
+            {% endif %}
+        {% endfor %}
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">Next</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+        {% endif %}
+    </div>
+    
+    
+    
+    
+
+    <footer>
+        <div class="mainfooter">
+            <div class="soiclamedia">
+                <img src="/static/images/logo.png" alt="Centered Image">
+                <p class="py_20 col_gray">We will help to find <br> your dream Product</p>
+                <div class="solical_link">
+                    <a href="#"> <img src="/static/images/facebook.png" alt=""> </a>
+                    <a href="#"><img src="/static/images/instagram (2).png" alt=""></a>
+                    <a href="#"><img src="/static/images/linkedin.png" alt=""></a>
+                </div>
+            </div>
+            <div class="newsletter">
+                <h3>Join Us</h3>
+                <p class="pt_20 col_dgray pb_10">SUBSCRIBE TO OUR NEWSLETTER</p>
+                <div class="newsbox">
+                    <input type="email" placeholder="Email Address">
+                    <input type="submit" class="sub_btn" value="SUBSCRIBE!" name="" id="">
+                </div>
+            </div>
+            <div class="sitedetails">
+                <div class="sitelink">
+                    <h3>Information</h3>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Product</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="sitelink">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Career</a></li>
+                        <li><a href="#">Our Story</a></li>
+                    </ul>
+                </div>
+                <div class="sitelink">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><a href="#">Geeting Started</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Resources</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="copyright col_gray">2024 All Right Received term of use COSMOe</div>
+    </footer>
+
+
+   
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+        integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>

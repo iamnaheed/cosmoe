@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="/static/JS/jquery.js"></script>
+    <link rel="stylesheet" href="/static/css/static.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>Search</title>
+</head>
+
+<body>
+    <div class="mainhead">
+        <div class="first-row">
+            <a href="/">
+            <img src="/static/images/logo.png" alt="Centered Image">
+        </a>
+        </div>
+        <div class="second-row">
+
+            <div class="search-icon">
+                <i class="fa fa-search"></i>
+                <input type="text" class="main-search" placeholder="What are you looking for?">
+            </div>
+            <div class="hot-icons right">
+                <i class="fa fa-heart-o"></i>
+            </div>
+        </div>
+        <hr>
+        <div class="third-row">
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#">BEST SELLER</a></li>
+                    <li><a href="#">CATEGORY</a></li>
+                    <li><a href="#">CONTACT US</a></li>
+                    <li><a href="#">ABOUT US</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="searchproduct">
+        <div class="seracharea">
+            <div class="searchfilter">
+                <p class="fs_12">Home/Earring</p>
+                <h2>Refine By</h2>
+                <ul>
+                    <h3>Category</h3>
+                    <li><input type="checkbox">
+                        <p>TABLE DECOR</p>
+                    </li>
+                    <li><input type="checkbox">
+                        <p>HOME DECOR</p>
+                    </li>
+                    <li><input type="checkbox">
+                        <p>WALL DECOR</p>
+                    </li>
+                    <li><input type="checkbox">
+                        <p>CLOCK DECOR</p>
+                    </li>
+                    <li><input type="checkbox">
+                        <p>KITCHEN DECOR</p>
+                    </li>
+                </ul>
+                <div class="filterbar"></div>
+                <ul>
+                    <h3>Price-Range</h3>
+                    <li><input type="checkbox">
+                        <p>BELOW RS.500</p>
+                    </li>
+                    <li><input type="checkbox">
+                        <p>RS.500-RS.1000</p>
+                    </li>
+                    <li><input type="checkbox">
+                        <p>RS.1001-RS.1500</p>
+                    </li>
+                    <li><input type="checkbox">
+                        <p>RS.1501-RS.2000</p>
+                    </li>
+                    <li><input type="checkbox">
+                        <p>RS.2001-RS.2500</p>
+                    </li>
+                    <p>Enter Price Range</p>
+                    <li>
+                        <input type="text" name="" id="" placeholder="Min" class="range"> &nbsp;&nbsp;-
+                        &nbsp;&nbsp;<input type="text" name="" id="" placeholder="MAX" class="range"><span>></span>
+                    </li>
+                </ul>
+                <div class="filterbar"></div>
+                <ul>
+                    <h3>Brand</h3>
+                    <li><input type="checkbox">
+                        <p>STATE</p>
+                    </li>
+                    <li><input type="checkbox">
+                        <p>COOPER</p>
+                    </li>
+                    <li><input type="checkbox">
+                        <p>BARDOT</p>
+                    </li>
+                    <li><input type="checkbox">
+                        <p>CECE</p>
+                    </li>
+                    <li><input type="checkbox">
+                        <p>DONNA RICCO</p>
+                    </li>
+                </ul>
+                <div class="filterbar"></div>
+                <ul>
+                    <h3>Color</h3>
+                    <div>
+                        <input type="radio" class="col_1" checked="checked">
+                        <input type="radio" class="col_2" checked="checked">
+                        <input type="radio" class="col_3" checked="checked">
+                        <input type="radio" class="col_4" checked="checked">
+                        <input type="radio" class="col_5" checked="checked">
+                        <input type="radio" class="col_6" checked="checked"><br><br>
+                        <input type="radio" class="col_7" checked="checked">
+                        <input type="radio" class="col_8" checked="checked">
+                        <input type="radio" class="col_9" checked="checked">
+                        <input type="radio" class="col_10" checked="checked">
+                        <input type="radio" class="col_11" checked="checked">
+                    </div>
+                </ul>
+            </div>
+
+            <div class="mianaiserch">
+                <div class="insiderAisearch">
+                    <div class="header-search">
+                        <form action="{% url 'search_results' %}" method="post">
+                            {% csrf_token %}
+                            <input type="text" class="informal" name="queryInput"
+                                placeholder="Write your informal query here..." style="padding: 10px;">
+                            <button type="submit" style="font-size: 1px; padding: 3px; right:40px; top:7px;"><img
+                                    src="/static/images/send-message.png"></button>
+                        </form>
+                    </div>
+                    <div>
+                        <div class="flex">
+                            <div class="layoutimg">
+                            <img src="/static/images/layout.png" alt="">
+                            <img src="/static/images/grid.png" alt="">
+                            </div>
+                            <select name="" id="">
+                                <option value="lowtohigh">Price(LOW TO HIGH)</option>
+                                <option value="lowtohigh">Price(HIGH TO LOW)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="search_gallery">
+                    {% if sorted_products is not None and not sorted_products.empty %}
+                    {% for index, product in sorted_products.iterrows %}
+                    <div class="card cards">
+                        <div class="cardimg">
+                            <img src="{{ product.image_src }}" alt="">
+                        </div>
+                        <div class="p_20">
+                            <div class="bar pt_10"></div>
+                            <h4 class="pt_10" style="color: rgb(181, 180, 180); font-size: 20px;">{{ product.title }}
+                            </h4>
+                            <p class="pt_10">Rating: {{ product.rating }}</p>
+                            <p class="pt_10">Sold Count: {{ product.sold_count }}</p>
+                            <p class="pt_10">Review Count: {{ product.review_count }}</p>
+                            <div class="buyer pt_10">
+                                <p>Rs. 870</p>
+                                <a href="{{ product.addtocart_href }}">Buy Now
+                                    &nbsp; <i style="font-size:20px ; color:white; ">&#x2192;</i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% else %}
+                <p>No products found.</p>
+                {% endif %}
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <footer>
+        <div class="mainfooter">
+            <div class="soiclamedia">
+                <img src="/static/" alt="Centered Image">
+                <p class="py_20 col_gray">We will help to find <br> your dream Product</p>
+                <div>
+                    <a href="#" class="fa fsa fa-facebook"></a>
+                    <a href="#" class="fa fsa fa-instagram"></a>
+                    <a href="#" class="fa fsa fa-twitter"></a>
+                </div>
+            </div>
+            <div class="newsletter">
+                <h3>Join Us</h3>
+                <p class="pt_20 col_dgray pb_10">SUBSCRIBE TO OUR NEWSLETTER</p>
+                <div class="newsbox">
+                    <input type="email" placeholder="Email Address">
+                    <input type="submit" class="sub_btn" value="SUBSCRIBE!" name="" id="">
+                </div>
+            </div>
+            <div class="sitedetails">
+                <div class="sitelink">
+                    <h3>Information</h3>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Product</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="sitelink">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Career</a></li>
+                        <li><a href="#">Our Story</a></li>
+                    </ul>
+                </div>
+                <div class="sitelink">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><a href="#">Geeting Started</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Resources</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="copyright col_gray">2024 All Right Received term of use COSMOe</div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+        integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>

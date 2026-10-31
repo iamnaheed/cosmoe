@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <title>About-us</title>
+    <script src="/static/JS/jquery.js"></script>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/static.css">
+</head>
+
+<body>
+    <div class="mainhead">
+        <div class="first-row">
+            <a href="/">
+            <img src="/static/images/logo.png" alt="Centered Image">
+        </a>
+        </div>
+        </div>
+        <div class="second-row">
+
+            <div class="search-icon">
+                <img src="/static/images/web.png">
+                <form action="{% url 'formalsearch' %}" method="GET">
+                    <input type="text" class="main-search" name="query" placeholder="What are you looking for?">
+                    {% comment %} <button type="submit">Search</button> {% endcomment %}
+                </form>
+            </div>
+            <div class="hot-icons right">
+                <img src="/static/images/heart.png">
+            </div>
+        </div>
+        <hr>
+        <div class="third-row">
+            <nav class="navbar">
+                <ul>
+                    <li><a href="/">HOME</a></li>
+                    <li class="dropdown-li">
+                        <a href="#">CATEGORIES</a>
+                        <ul class="dropdown">
+                            <li><a href="#"><img src="/static/images/kitchen.png" alt="Kitchen Ware">Kitchen ware</a></li>
+                            <li><a href="#"><img src="/static/images/shelf.png" alt="Home Decor">Home decor</a></li>
+                            <li><a href="#"><img src="/static/images/furniture.png" alt="Wooden">Wooden</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">BEST SELLER</a></li>
+                    <li><a href="#">RELATED SEARCH</a></li>
+                    <li><a href="{% url 'about-us' %}">ABOUT US</a></li>
+                    <li><a href="{% url 'contact-us' %}">CONTACT US</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+              
+    </div>
+    <div class="aboutsession">
+        <div class="about_detalis">
+            <h1>About Us</h1>
+            <div class="about_details">
+              <div class="detalis_part1">
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In molestiae facilis enim nihil possimus beatae eveniet repellat corporis, dignissimos architecto! Libero sunt ea minus consectetur voluptatibus voluptatem? Assumenda aliquam ea corrupti, mollitia quidem aperiam rem? Ex magnam mollitia magni, eum tempore dolores deserunt? Cum facere perspiciatis id. Quis modi consectetur, voluptatem eaque veritatis incidunt, qui iusto deleniti dolorem pariatur iste!</p>
+              </div>
+              <div class="detalis_part2">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. In molestiae facilis enim nihil possimus beatae eveniet repellat corporis, dignissimos architecto! Libero sunt ea minus consectetur voluptatibus voluptatem? Assumenda aliquam ea corrupti, mollitia quidem aperiam rem? Ex magnam mollitia magni, eum tempore dolores deserunt? Cum facere perspiciatis id. Quis modi consectetur, voluptatem eaque veritatis incidunt, qui iusto deleniti dolorem pariatur iste!</p>
+              </div>
+            </div>
+            </div>
+        </div>
+        
+            <div class="custom-shape-divider-top-1714768756">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+                </svg>
+            </div>
+            <div class="about_image">
+                <div class="about_image_details">
+                    <h2 class="fa-2x pb_10">Our Mission</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi placeat similique Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi placeat similique voluptate dolor ut natus autem nulla expedita ipsam sint!</p>
+                </div>
+            </div>
+    <footer>
+        <div class="mainfooter">
+            <div class="soiclamedia">
+                <img src="/static/images/logo.png" alt="Centered Image">
+                <p class="py_20 col_gray">We will help to find <br> your dream Product</p>
+                <div class="solical_link">
+                    <a href="#"> <img src="/static/images/facebook.png" alt=""> </a>
+                    <a href="#"><img src="/static/images/instagram (2).png" alt=""></a>
+                    <a href="#"><img src="/static/images/linkedin.png" alt=""></a>
+                </div>
+            </div>
+            <div class="newsletter">
+                <h3>Join Us</h3>
+                <p class="pt_20 col_dgray pb_10">SUBSCRIBE TO OUR NEWSLETTER</p>
+                <div class="newsbox">
+                    <input type="email" placeholder="Email Address">
+                    <input type="submit" class="sub_btn" value="SUBSCRIBE!" name="" id="">
+                </div>
+            </div>
+            <div class="sitedetails">
+                <div class="sitelink">
+                    <h3>Information</h3>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Product</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="sitelink">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Career</a></li>
+                        <li><a href="#">Our Story</a></li>
+                    </ul>
+                </div>
+                <div class="sitelink">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><a href="#">Geeting Started</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Resources</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="copyright col_gray">2024 All Right Received term of use COSMOe</div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+        integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>

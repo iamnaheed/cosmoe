@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>ProductDetalis</title>
+    <script src="static/JS/jquery.js"></script>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/static.css">
+</head>
+
+<body>
+    <div class="mainhead">
+        <div class="first-row">
+            <a href="/">
+            <img src="/static/images/logo.png" alt="Centered Image">
+        </a>
+        </div>
+        <div class="second-row">
+
+            <div class="search-icon">
+                <i class="fa fa-search"></i>
+                <input type="text" class="main-search" placeholder="What are you looking for?">
+            </div>
+            <div class="hot-icons right">
+                <i class="fa fa-heart-o"></i>
+            </div>
+        </div>
+        <hr>
+        <div class="third-row">
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#">BAGS</a></li>
+                    <li><a href="#">HOME DECOR</a></li>
+                    <li><a href="#">KITCHEN & DINNING</a></li>
+                    <li><a href="#">BEST SELLER</a></li>
+                    <li><a href="#">RELATED SEARCH</a></li>
+                    <li><a href="#">ABOUT US</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <section class="product_detalis">
+        <div class="products">
+            <div class="product_img">
+                <p class="pb_10">home/handicraft</p>
+                <img src="images/images (7).jpeg" alt="">
+                <div class="img_details_pic">
+                    <div>
+                        <img src="images/download.jpeg" alt="">
+                    </div>
+                    <div>
+                        <img src="images/images (1).jpeg" alt="">
+                    </div>
+                    <div>
+                        <img src="images/images (3).jpeg" alt="">
+                    </div>
+                    <div>
+                        <img src="images/images (6).jpeg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="product_dec">
+                <h1>Handmade Handicraft
+                    <br> Things
+                </h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia totam vero voluptate voluptates
+                    consectetur iste ipsum ad quam, inventore eius similique tempora architecto neque ducimus molestiae
+                    maiores quos veniam rerum! Reprehenderit asperiores illum labore nulla vel dolore optio facere velit
+                    a quasi ab, harum et nam voluptates? Voluptatibus, dolore quas! </p>
+                <div>
+                    <h3>Select Color</h3>
+                    <div class="p_10">
+                        <input type="radio" class="col_1" checked="checked">
+                        <input type="radio" class="col_2" checked="checked">
+                        <input type="radio" class="col_4" checked="checked">
+                        <input type="radio" class="col_5" checked="checked">
+                    </div>
+                </div>
+                <div class="buylogo flex">
+                    <div class="productlogo">
+                        <img src="images/image 32.png" alt="">
+                    </div>
+                    <div class="productprice">
+                        <p class="">PRICE</p>
+                        <h3>Rs. 900</h3>
+                    </div>
+                </div>
+                <div class="buybutton">
+                    <button class="bg_org">GO TO STORE</button>
+                    <button class="ml_10 bg_trans"><i class="fa fa-heart-o" style="font-size:12px;"></i>&nbsp;
+                        &nbsp;&nbsp;SAVE</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <session>
+        <div id="buttons" style="text-align: center;">
+            <div id="buttons">
+                <button id="descriptionButton" onclick="showDescription()" class="active">DESCRIPTION</button>
+                <button id="reviewButton" onclick="showReview()">REVIEWS</button>
+            </div>
+        </div>
+        <div id="descriptionSection">
+            <div class="flex">
+                <div class="aboutdescription">
+                    <h4 class="pb_10">ABOUT PRODUCT</h4>
+                    <P class="pb_10">Cool off this summer in the Mini Ruffle Smocked Tank Top from our very own LA
+                        Hearts. This tank features a smocked body, adjustable straps, scoop neckline, ruffled hems, and
+                        a cropped fit.
+                    </P>
+                    <h4 class="pb_10">ADVANTAGES</h4>
+                    <ul>
+                        <li>Smocked body</li>
+                        <li>Adjustable straps</li>
+                        <li>Processin</li>
+                        <li>Scoop neckline
+                        </li>
+                        <li> Machine washable</li>
+                        <li>100% rayon
+                        </li>
+                    </ul>
+                </div>
+                <div class="aboutshipping">
+                    <h4 class="pb_10">SHIPPING</h4>
+                    <p class="pb_10">We offer Free Standard Shipping for all orders over $75 to the 50 states and the
+                        District of Columbia. The minimum order value must be $75 before taxes, shipping and handling.
+                        Shipping fees are non-refundable.
+                    </p>
+                    <br>
+                    <p>
+                        Please allow up to 2 business days (excluding weekends, holidays, and sale days) to process your
+                        order.
+                    </p>
+                    <br>
+                    <p>Processing Time + Shipping Time = Delivery Time</p>
+                </div>
+            </div>
+        </div>
+        <div id="reviewSection" style="display:none;">
+            <h3 style="padding: 12px;font-family: sans-serif; color: #3a3a3a;padding-left: 15%;">Customer Feedback</h3>
+            <div id="mainDiv">
+                <div id="ratingDiv">
+                    <h1 class="fa-5x">4.8</h1>
+                    <div class="stars pb_10">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <p>Product Rating</p>
+                </div>
+                <div id="barDiv">
+                    <div id="container">
+                        <div id="bottomDiv"></div>
+                        <div id="topDiv"></div>
+                        <span class="fa fa-star fa_14 pl_20 checked"></span>
+                        <span class="fa fa-star fa_14  checked"></span>
+                        <span class="fa fa-star fa_14  checked"></span>
+                        <span class="fa fa-star fa_14  checked"></span>
+                        <span class="fa  fa_14 fa-star"></span>
+                        <p class="pl_20">70%</p>
+                    </div>
+                    <div id="container">
+                        <div id="bottomDiv"></div>
+                        <div id="topDiv" style="width: 40%;"></div>
+                        <span class="fa fa-star fa_14 pl_20 checked"></span>
+                        <span class="fa fa-star fa_14  checked"></span>
+                        <span class="fa fa-star fa_14  checked"></span>
+                        <span class="fa fa-star fa_14  "></span>
+                        <span class="fa  fa_14 fa-star"></span>
+                        <p class="pl_20">50%</p>
+                    </div>
+                    <div id="container">
+                        <div id="bottomDiv"></div>
+                        <div id="topDiv" style="width: 25%;"></div>
+                        <span class="fa fa-star fa_14 pl_20 checked"></span>
+                        <span class="fa fa-star fa_14  checked"></span>
+                        <span class="fa fa-star fa_14  "></span>
+                        <span class="fa fa-star fa_14  "></span>
+                        <span class="fa  fa_14 fa-star"></span>
+                        <p class="pl_20">30%</p>
+                    </div>
+                    <div id="container">
+                        <div id="bottomDiv"></div>
+                        <div id="topDiv" style="width: 15%;"></div>
+                        <span class="fa fa-star fa_14 pl_20 checked"></span>
+                        <span class="fa fa-star fa_14  checked"></span>
+                        <span class="fa fa-star fa_14  "></span>
+                        <span class="fa fa-star fa_14  "></span>
+                        <span class="fa  fa_14 fa-star"></span>
+                        <p class="pl_20">10%</p>
+                    </div>
+                    <div id="container">
+                        <div id="bottomDiv"></div>
+                        <div id="topDiv" style="width: 5%;"></div>
+                        <span class="fa fa-star fa_14 pl_20 checked"></span>
+                        <span class="fa fa-star fa_14  "></span>
+                        <span class="fa fa-star fa_14  "></span>
+                        <span class="fa fa-star fa_14  "></span>
+                        <span class="fa  fa_14 fa-star"></span>
+                        <p class="pl_20">05%</p>
+                    </div>
+                </div>
+            </div>
+            <div class="customerReview">
+                <h3 style="padding-left: 15%;font-family: sans-serif; color: #3a3a3a;">REVIEWS</h3>   
+            <div class="mainreview">
+                <div class="reviewprofile">
+                  <div>S.H</div>
+                </div>
+                <div class="reviewdetails">
+                  <div class="flex" style="align-items: baseline;"><h2 class="pb_10"style="color: #3a3a3a;">Shahbaz Haider</h2> <p class="pb_10 pl_20">3 Days Ago</p></div>
+                   <div class="pb_10">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                   </div>
+                   <h4 class="pb_10">Grate Product</h4>
+                   <p class="pb_10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quos mollitia laudantium.</p>
+                   <div>
+                    <span><img src="images/icons8-like-48.png" alt="">Like</span>
+                    <span class="pl_20">Reply</span>
+                   </div>
+                </div>
+
+            </div>
+            <div class="mainreview">
+                <div class="reviewprofile">
+                  <div>A.D</div>
+                </div>
+                <div class="reviewdetails">
+                  <div class="flex" style="align-items: baseline;">
+                    <h2 class="pb_10"style="color: #3a3a3a;">Abdulla </h2> <p class="pb_10 pl_20">5 Days Ago</p></div>
+                   <div class="pb_10">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star "></span>
+                    <span class="fa fa-star"></span>
+                   </div>
+                   <h4 class="pb_10">Grate Product</h4>
+                   <p class="pb_10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab quos mollitia laudantium.</p>
+                   <div>
+                    <span><img src="images/icons8-like-48.png" alt=""> Like</span>
+                    <span class="pl_20">Reply</span>
+                   </div>
+                </div>
+                
+            </div>
+            <div class="allreviews">
+                <p>View all reviews</p>
+            </div>
+            </div>
+            <div class="reviewswrite">
+                <h3 class="pb_10"style="color: #3a3a3a;">Write a review</h3>
+                <p>What is like you Product?</p>
+                <div class="pb_10">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star "></span>
+                    <span class="fa fa-star"></span>
+                </div>
+                <label for="Rtitle" class="pb_10">Review Title</label>
+                <input type="text" id="Rtitle" placeholder="Enter the product Title">
+                <br>
+                <label for="" class="pb_10">Review Content</label>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+            </div>
+        </div>
+        </div>
+        </div>
+    </session>
+    <session>
+        <div class="filter">
+        <div style="width: 40%;">
+            <p>Filter Products</p>
+            <div style="display: flex; width: 100%; align-items: baseline;">
+                <h2>Related products </h2>
+                <div class="bar"></div>
+            </div>
+        </div>
+        <button class="btn">SEE ALL</button>
+    </div>
+    <div class="catagery_gallery">
+        <div class="card">
+            <div class="cardimg">
+                <img src="images/images (1).jpeg" alt="">
+            </div>
+            <div class="p_20">
+                <div class="bar pt_10"></div>
+                <h3 class="pt_10" style="color: rgb(181, 180, 180); font-size: 20px;">Lorem ipsum</h3>
+                <p class="pt_10">Lorem ipsum, dolor sit amet consectetu dolor sit amet consectetur r adipisicing elit.
+                    At, aliquid?</p>
+                <div class="buyer pt_10">
+                    <p>Rs. 870</p>
+                    <a href="#">Buy Now
+                        &nbsp; <i style="font-size:20px ; color:white; ">&#x2192;</i>
+                    </a>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="card">
+            <div class="cardimg">
+                <img src="images/images (2).jpeg" alt="">
+            </div>
+            <div class="p_20">
+                <div class="bar pt_10"></div>
+                <h3 class="pt_10" style="color: rgb(181, 180, 180); font-size: 20px;">Lorem ipsum</h3>
+                <p class="pt_10 ">Lorem ipsum, dolor sit amet consectetu dolor sit amet consectetur r adipisicing elit.
+                    At, aliquid?
+                </p>
+                <div class="buyer pt_10">
+                    <p>Rs. 870</p>
+                    <a href="#">Buy Now
+                        &nbsp; <i style="font-size:20px ; color:white; ">&#x2192;</i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="cardimg">
+                <img src="images/images (3).jpeg" alt="">
+            </div>
+            <div class="p_20">
+                <div class="bar pt_10"></div>
+                <h3 class="pt_10" style="color: rgb(181, 180, 180); font-size: 20px;">Lorem ipsum</h3>
+                <p class="pt_10">Lorem ipsum, dolor sit amet consectetu dolor sit amet consectetur r adipisicing elit.
+                    At, aliquid?</p>
+                <div class="buyer pt_10">
+                    <p>Rs. 870</p>
+                    <a href="#">Buy Now
+                        &nbsp; <i style="font-size:20px ; color:white; ">&#x2192;</i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="cardimg">
+                <img src="images/images (1).jpeg" alt="">
+            </div>
+            <div class="p_20">
+                <div class="bar pt_10"></div>
+                <h3 class="pt_10" style="color: rgb(181, 180, 180); font-size: 20px;">Lorem ipsum</h3>
+                <p class="pt_10">Lorem ipsum, dolor sit amet consectetu dolor sit amet consectetur r adipisicing elit.
+                    At, aliquid?</p>
+                <div class="buyer pt_10">
+                    <p>Rs. 870</p>
+                    <a href="#">Buy Now
+                        &nbsp; <i style="font-size:20px ; color:white; ">&#x2192;</i>
+                    </a>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    </session>
+    <footer>
+        <div class="mainfooter">
+            <div class="soiclamedia">
+                <img src="" alt="Centered Image">
+                <p class="py_20 col_gray">We will help to find <br> your dream Product</p>
+                <div>
+                    <a href="#" class="fa fsa fa-facebook"></a>
+                    <a href="#" class="fa fsa fa-instagram"></a>
+                    <a href="#" class="fa fsa fa-twitter"></a>
+                </div>
+            </div>
+            <div class="newsletter">
+                <h3>Join Us</h3>
+                <p class="pt_20 col_dgray pb_10">SUBSCRIBE TO OUR NEWSLETTER</p>
+                <div class="newsbox">
+                    <input type="email" placeholder="Email Address">
+                    <input type="submit" class="sub_btn" value="SUBSCRIBE!" name="" id="">
+                </div>
+            </div>
+            <div class="sitedetails">
+                <div class="sitelink">
+                    <h3>Information</h3>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Product</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="sitelink">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">Community</a></li>
+                        <li><a href="#">Career</a></li>
+                        <li><a href="#">Our Story</a></li>
+                    </ul>
+                </div>
+                <div class="sitelink">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><a href="#">Geeting Started</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Resources</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="copyright col_gray">2024 All Right Received term of use COSMOe</div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+        integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>
