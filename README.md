@@ -386,16 +386,21 @@ Through this project, I gained practical experience in:
 
 ## 17. Author
 
-**[Your Full Name]**
-[Degree Program], [University Name]
-Email: [your.email@example.com]
-LinkedIn: [linkedin.com/in/your-profile]
-GitHub: [github.com/your-username]
+**Naheed Nawaz**
+- BS Software Engineering
+- University of Sargodha
+- naheednawaz444@gmail.com
+- LinkedIn: www.linkedin.com/in/naheednawazkhokhar
+- GitHub: Github.com/iamnaheed
 
-**Supervisor:** [Supervisor Name], [Department]
+**Supervisor:** 
+Dr. Muhammad Saad Razzaq
+Assistant Professor
++92 3009600331
+saad.razzaq@uos.edu.pk
 
 ---
 
 ## 18. License
 
-This project was developed for **educational and academic purposes**. Product data belongs to the original marketplaces (Daraz.pk and Etsy) and was collected only for research and demonstration.
+This project was developed for my **FYP**. Product data belongs to the original marketplaces (Daraz.pk and Etsy) and was collected only for research and demonstration.
