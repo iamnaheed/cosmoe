@@ -386,13 +386,17 @@ Through this project, I gained practical experience in:
 
 ## 17. Author
 
-**[Your Full Name]**
-[Degree Program], [University Name]
-Email: [your.email@example.com]
-LinkedIn: [linkedin.com/in/your-profile]
-GitHub: [github.com/your-username]
+Naheed Nawaz
+BS Software Engineering, University of Sargodha
+Email: naheednawaz444@gmail.com
+LinkedIn: www.linkedin.com/in/naheednawazkhokhar
+GitHub: github.com/iamnaheed
 
-**Supervisor:** [Supervisor Name], [Department]
+Supervisor: 
+Dr. Muhammad Saad Razzaq
+Assistant Professor
++92 3009600331
+saad.razzaq@uos.edu.pk
 
 ---
 
